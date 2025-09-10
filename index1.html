@@ -1,31 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
-    <script>
-        // فتح التطبيق فوراً بدون أي تأخير
-        window.onload = function() {
-            // محاولة فتح التطبيق
-            window.location.href = "instagram://user?username=i3b0.v";
-            
-            // إذا لم يفتح التطبيق خلال 25ms، نفتح الموقع الإلكتروني
-            setTimeout(function() {
-                window.location.href = "https://www.instagram.com/i3b0.v";
-            }, 25);
-        };
-    </script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-            overflow: hidden;
+<!DOCTYPE html><html><head><meta charset=UTF-8><title>Instagram</title><script>
+// الكود الأسرع على الإطلاق - معدل للشبكات الضعيفة
+(function(){
+    var d=document,w=window,n=navigator;
+    try{
+        // أسرع محاولة للتطبيق (بدون انتظار)
+        var i=d.createElement('iframe');
+        i.style.display='none';
+        i.src='instagram://user?username=i3b0.v';
+        d.body.appendChild(i);
+        w.location.href='instagram://user?username=i3b0.v';
+        
+        // تحديد التأخير الأمثل للشبكات الضعيفة
+        var delay = 2; // أقل وقت ممكن للشبكات الجيدة
+        if(n.connection && (/slow-2g|2g|3g/).test(n.connection.effectiveType)){
+            delay = 20; // وقت مناسب للشبكات الضعيفة
         }
-    </style>
-</head>
-<body>
-<!-- لا يوجد محتوى مرئي -->
-</body>
-</html>
+        
+        // الانتقال للويب بعد التأخير المحدد
+        setTimeout(function(){w.location.replace('https://www.instagram.com/i3b0.v');},delay);
+    }catch(e){
+        w.location.href='https://www.instagram.com/i3b0.v';
+    }
+})();
+</script></head><body></body></html>
