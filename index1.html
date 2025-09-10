@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>إنستجرام</title>
-<meta http-equiv="refresh" content="0;url=instagram://user?username=i3b0.v">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <script>
+        // فتح التطبيق فوراً بدون أي تأخير
+        window.onload = function() {
+            // محاولة فتح التطبيق
+            window.location.href = "instagram://user?username=i3b0.v";
+            
+            // إذا لم يفتح التطبيق خلال 25ms، نفتح الموقع الإلكتروني
+            setTimeout(function() {
+                window.location.href = "https://www.instagram.com/i3b0.v";
+            }, 25);
+        };
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-<p>جاري فتح حساب الإنستجرام...</p>
+<!-- لا يوجد محتوى مرئي -->
 </body>
 </html>
