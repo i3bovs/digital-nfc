@@ -1,25 +1,32 @@
-<!DOCTYPE html><html><head><meta charset=UTF-8><title>Instagram</title><script>
-// الكود الأسرع على الإطلاق - معدل للشبكات الضعيفة
-(function(){
-    var d=document,w=window,n=navigator;
-    try{
-        // أسرع محاولة للتطبيق (بدون انتظار)
-        var i=d.createElement('iframe');
-        i.style.display='none';
-        i.src='instagram://user?username=i3b0.v';
-        d.body.appendChild(i);
-        w.location.href='instagram://user?username=i3b0.v';
-        
-        // تحديد التأخير الأمثل للشبكات الضعيفة
-        var delay = 2; // أقل وقت ممكن للشبكات الجيدة
-        if(n.connection && (/slow-2g|2g|3g/).test(n.connection.effectiveType)){
-            delay = 20; // وقت مناسب للشبكات الضعيفة
-        }
-        
-        // الانتقال للويب بعد التأخير المحدد
-        setTimeout(function(){w.location.replace('https://www.instagram.com/i3b0.v');},delay);
-    }catch(e){
-        w.location.href='https://www.instagram.com/i3b0.v';
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Instagram</title>
+<script>
+try {
+    // المحاولة الأولى: iframe (لـ iOS)
+    var i = document.createElement('iframe');
+    i.style.cssText = 'display:none;';
+    i.src = 'instagram://user?username=0p_a.p';
+    document.body.appendChild(i);
+
+    // المحاولة الثانية: window.location (لـ Android)
+    window.location.href = 'instagram://user?username=0p_a.p';
+
+    // الانتقال للويب بعد 5ms (أقل وقت ممكن)
+    setTimeout(function () {
+        window.location.replace('https://www.instagram.com/0p_a.p?igsh=MXJ1ZHY5eXp1djVrMA==');
+    }, 5);
+} catch (e) {
+    window.location.href = 'https://www.instagram.com/0p_a.p?igsh=MXJ1ZHY5eXp1djVrMA==';
+}
+</script>
+<style>
+    body, html {
+        display: none;
     }
-})();
-</script></head><body></body></html>
+</style>
+</head>
+<body></body>
+</html>
